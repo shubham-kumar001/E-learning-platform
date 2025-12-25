@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Learning Preference</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="checkLogin()">
+
+<div class="card slide-up">
+    <h2>Select Your Learning Path</h2>
+
+    <label>Branch</label>
+    <select id="branch" onchange="updateDepartments()">
+        <option value="">-- Select Branch --</option>
+        <option value="engineering">Engineering</option>
+        <option value="medical">Medical</option>
+    </select>
+
+    <label>Department</label>
+    <select id="department" onchange="updateTopics()">
+        <option value="">-- Select Department --</option>
+    </select>
+
+    <label>Level</label>
+    <select id="level" onchange="updateTopics()">
+        <option value="">-- Select Level --</option>
+        <option value="beginner">Beginner</option>
+        <option value="intermediate">Intermediate</option>
+        <option value="advanced">Advanced</option>
+    </select>
+
+    <label>Topic</label>
+    <select id="topic"></select>
+
+    <div class="nav">
+        <button class="btn" onclick="back()">← Previous</button>
+        <button class="btn" onclick="savePreference()">Next →</button>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
